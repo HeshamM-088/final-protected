@@ -8,12 +8,15 @@ import MainStore from "../context/MainStore";
 import { UseUser } from "../context/UserContext";
 
 const Header = () => {
-  const { cartItems } = useContext(MainStore);
+  const { cartItems, setProductToCart, productToCart, setCartItems } =
+    useContext(MainStore);
   const { user, setUser } = UseUser();
 
   const logOut = () => {
     localStorage.clear();
     setUser(null);
+    setCartItems([]);
+    setProductToCart(!productToCart);
   };
 
   return (

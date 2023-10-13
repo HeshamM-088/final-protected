@@ -4,7 +4,6 @@ import { UserContext } from "../context/UserContext";
 const Home = () => {
   const { user } = useContext(UserContext);
 
-  console.log(user);
   return (
     <div className="text-center">
       <h1>Home</h1>
